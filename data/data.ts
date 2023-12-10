@@ -9,7 +9,6 @@ export type VolData = {
 };
 
 export type Planet = {
-  // something
   id: string;
   name: string;
   isPlanet: boolean;
@@ -17,7 +16,7 @@ export type Planet = {
   vol: VolData;
   gravity: number;
   avgTemp: number;
-  moonsCount: number;
+  moonsCount?: number;
   moons?: string[];
 };
 
