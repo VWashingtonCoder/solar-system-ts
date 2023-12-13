@@ -1,33 +1,26 @@
-export const minBy = (
-  array: Element[],
-  cb: (element: Element | undefined) => {}
-) => {
-  if (array.length === 0) return undefined;
-
-  let min = cb(array[0]);
+export const minBy = <X>(array: X[], cb: (element: X) => number | string) => {
   let minElement = array[0];
+  let min = array.map((element) => cb(element))[0] as number | string;
 
   for (let element of array) {
-    if (cb(element) < min) {
-      min = cb(element);
+    const cbResult = cb(element);
+
+    if (cbResult < min) {
+      min = cbResult;
       minElement = element;
     }
   }
   return minElement;
 };
 
-export function maxBy(
-  array: Element[],
-  cb: (element: Element | undefined) => {}
-) {
-  if (array.length === 0) return undefined;
-
-  let max = cb(array[0]);
+export function maxBy<X>(array: X[], cb: (element: X) => number | string) {
   let maxElement = array[0];
+  let max = array.map((element) => cb(element))[0] as number | string;
 
   for (let element of array) {
-    if (cb(element) > max) {
-      max = cb(element);
+    const cbResult = cb(element);
+    if (cbResult > max) {
+      max = cbResult;
       maxElement = element;
     }
   }
