@@ -8,11 +8,8 @@ export function getGreatestDiscoveryYear(asteroids: Asteroid[]) {
   const years = new Map<number, number>();
   for (let asteroid of asteroids) {
     const year = asteroid.discoveryYear;
-    if (years.has(year)) {
-      years.set(year, years.get(year)! + 1);
-    } else {
-      years.set(year, 1);
-    }
+    if (years.has(year)) years.set(year, years.get(year)! + 1);
+    else years.set(year, 1);
   }
   let maxYear = 0;
   let maxYearCount = 0;

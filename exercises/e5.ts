@@ -5,12 +5,17 @@
 import { Planet } from "../data/data";
 
 type Props = {
-  planets: Planet[],
-  greaterThanOrEqualTo: number,
-}; 
+  planets: Planet[];
+  greaterThanOrEqualTo: number;
+};
 
-export function getPlanetNamesWithMassValue({ planets, greaterThanOrEqualTo }: Props) {
-  return planets.filter(planet => planet.mass.massValue >= greaterThanOrEqualTo).map(planet => planet.name);
+export function getPlanetNamesWithMassValue({
+  planets,
+  greaterThanOrEqualTo,
+}: Props) {
+  return planets
+    .filter((planet) => planet.mass.massValue >= greaterThanOrEqualTo)
+    .map((planet) => planet.name);
 }
 
 // === TEST YOURSELF ===

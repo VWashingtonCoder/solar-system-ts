@@ -3,14 +3,15 @@
 //  must have destructured parameters
 import { Planet } from "../data/data";
 
-type PropsType = {
-    planets: Planet[];
-    moonName: string;
-};
-
-export function findPlanetByMoon({ planets, moonName }: PropsType) {
-    const searchMoonName = moonName.charAt(0).toUpperCase() + moonName.slice(1);
-    return planets.find((planet) => planet.moons?.includes(searchMoonName));
+export function findPlanetByMoon({
+  planets,
+  moonName,
+}: {
+  planets: Planet[];
+  moonName: string;
+}) {
+  const searchMoonName = moonName.charAt(0).toUpperCase() + moonName.slice(1);
+  return planets.find((planet) => planet.moons?.includes(searchMoonName));
 }
 
 // === TEST YOURSELF ===

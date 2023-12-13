@@ -4,7 +4,7 @@
 import { Planet } from "../data/data";
 
 export function getAllAverageTemperatures(planets: Planet[]) {
-    return planets.map(planet => planet.avgTemp);
+  return planets.map((planet) => planet.avgTemp);
 }
 
 // === TEST YOURSELF ===

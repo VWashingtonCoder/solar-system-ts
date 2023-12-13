@@ -3,13 +3,14 @@
 // make sure that you destructure your parameters
 import { AllData } from "../data/data";
 
-type PropType = {
-    allData: AllData;
-    asteroidName: string;
-};
-
-export function getAsteroidDataByName({ allData, asteroidName }: PropType) {
-    return allData.asteroids.find((asteroid) => asteroid.name === asteroidName);
+export function getAsteroidDataByName({
+  allData,
+  asteroidName,
+}: {
+  allData: AllData;
+  asteroidName: string;
+}) {
+  return allData.asteroids.find((asteroid) => asteroid.name === asteroidName);
 }
 
 // === TEST YOURSELF ===

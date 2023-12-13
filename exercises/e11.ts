@@ -4,11 +4,11 @@
 import { Planet } from "../data/data";
 
 export function lowMoonsPlanets(planets: Planet[]) {
-    return planets.filter((planet) => {
-        if (planet.moons === undefined || planet.moons.length < 10) {
-            return planet.name;
-        }
-    });
+  return planets.filter((planet) => {
+    if (planet.moons === undefined || planet.moons.length < 10) {
+      return planet.name;
+    }
+  });
 }
 
 // === TEST YOURSELF ===
