@@ -1,3 +1,9 @@
+## Developer Notes
+Vincent A. Washington II*
+Completion Date: 12/13/23
+github: vwashingtoncoder
+
+
 ## GETTING STARTED
 
 - Clone this repository.
